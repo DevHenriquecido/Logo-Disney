@@ -1,0 +1,31 @@
+
+import { View, Image, StyleSheet} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+export default function App() {
+  const logoDisney = 'https://logodownload.org/wp-content/uploads/2020/11/disney-plus-logo-1.png'
+
+  return (
+       <LinearGradient  colors={['#050627', '#1f469a']} style={style.container}>
+      <View style={style.container}>
+     <Image
+       style={style.logo}
+       source={{uri: logoDisney,}}
+      />
+      </View>
+      </LinearGradient>
+  )
+}
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logo: {
+    width: 195,
+    height: 105
+  }
+})
+
+
